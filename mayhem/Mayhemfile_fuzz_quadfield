@@ -1,0 +1,11 @@
+project: savantenvs/RecoilEngine
+target: fuzz_quadfield
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_quadfield/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_quadfield
+    libfuzzer: true
+    timeout: 5

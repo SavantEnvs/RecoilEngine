@@ -1,0 +1,1 @@
+spring://alice:secret@example.org:8452/query

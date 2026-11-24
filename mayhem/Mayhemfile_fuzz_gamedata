@@ -1,0 +1,11 @@
+project: savantenvs/RecoilEngine
+target: fuzz_gamedata
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gamedata/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_gamedata
+    libfuzzer: true
+    timeout: 5
